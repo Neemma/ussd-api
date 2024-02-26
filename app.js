@@ -5,8 +5,8 @@ const dotenv = require('dotenv').config();
 const app = express();
 app.use(bodyParser.json());
 
-const confirmPinRouter = require('./routes/confirmPin');
-const blockTransactionsRouter = require('./routes/blockTransactions');
+const confirmPinRouter = require('./api/confirmPin');
+const blockTransactionsRouter = require('./api/blockTransactions');
 
 app.use('/confirm-pin', confirmPinRouter);
 app.use('/block-transactions', blockTransactionsRouter);
